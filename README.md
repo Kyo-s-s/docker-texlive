@@ -1,6 +1,6 @@
 # Kyo-s-s/docker-texlive
 
-bullseyeを使ったTeXLiveのイメージです。
+arch linuxを使ったTeXLiveのイメージです。TeXLive2022が入ります。
 
 `plistings`, `algorithms`, `algorithmics` を導入してあります。
 
