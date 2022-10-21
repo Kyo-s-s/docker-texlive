@@ -2,7 +2,7 @@
 
 arch linuxを使ったTeXLiveのイメージです。TeXLive2022が入ります。
 
-`plistings`, `algorithms`, `algorithmics` を導入してあります。
+`plistings`, `algorithms`, `algorithmics`, `thmbox` を導入してあります。
 
 ### ビルド
 ```
