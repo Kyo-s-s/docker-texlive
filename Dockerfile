@@ -35,4 +35,7 @@ RUN curl -OL https://www.ctan.org/tex-archive/macros/latex/contrib/thmbox.zip \
     && mv thmbox /usr/share/texmf-dist/tex/latex/ \
     && mktexlsr
 
-WORKDIR /workdir
+ARG USER_ID=1000
+RUN useradd -m -u ${USER_ID} docker
+
+WORKDIR /home/docker

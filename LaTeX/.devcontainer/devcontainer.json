@@ -1,0 +1,11 @@
+{
+    "name": "LaTeX",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "latex",
+    "remoteUser": "docker",
+    "workspaceFolder": "/home/docker/work",
+    "extensions": [
+        "James-Yu.latex-workshop"
+    ],
+    "shutdownAction": "stopCompose"
+}

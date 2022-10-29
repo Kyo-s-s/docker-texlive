@@ -1,0 +1,6 @@
+services:
+  latex:
+    image: kyopopo/texlive:latest
+    volumes:
+      - ../:/home/docker/work
+    tty: true
