@@ -4,6 +4,7 @@ RUN pacman -Syu --noconfirm
 
 RUN pacman -S texlive-langjapanese \
     texlive-latexextra \
+    texlive-latexindent-meta \
     ghostscript \
     git \
     curl \
