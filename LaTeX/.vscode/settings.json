@@ -1,44 +1,23 @@
 {
-    // ===== LuaLaTeX =====
     "latex-workshop.latex.recipes": [
         {
-            "name": "LuaLaTeX",
+            "name": "latexmk",
             "tools": [
-                "LuaLaTeX"
+                "latexmk"
             ]
         }
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "LuaLaTeX",
-            "command": "lualatex",
+            "name": "latexmk",
+            "command": "latexmk",
             "args": [
                 "-interaction=nonstopmode",
+                "-outdir=%OUTDIR%",
                 "%DOC%"
             ]
         }
     ],
-
-    // ===== pLaTeX =====
-    // "latex-workshop.latex.recipes": [
-    //     {
-    //         "name": "pLaTeX",
-    //         "tools": [
-    //             "pLaTeX"
-    //         ]
-    //     }
-    // ],
-    // "latex-workshop.latex.tools": [
-    //     {
-    //         "name": "pLaTeX",
-    //         "command": "ptex2pdf",
-    //         "args": [
-    //             "-l",
-    //             "-interaction=nonstopmode",
-    //             "%DOC%"
-    //         ]
-    //     }
-    // ],
 
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
