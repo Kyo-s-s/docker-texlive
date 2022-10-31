@@ -21,6 +21,9 @@
 
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true,
+    "latex-workshop.viewer.pdf.internal.port": 12345,
     "files.exclude": {
         ".devcontainer": true
     }
