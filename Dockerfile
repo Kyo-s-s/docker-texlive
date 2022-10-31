@@ -1,4 +1,4 @@
-FROM archlinux:base-20221009.0.92802
+FROM archlinux:base-devel-20221023.0.96685
 
 ARG USER_ID=1000
 RUN useradd -m -u ${USER_ID} docker
@@ -8,7 +8,6 @@ RUN pacman -Syyu --noconfirm \
     texlive-latexextra \
     perl-yaml-tiny \
     perl-file-homedir \
-    perl-unicode-linebreak \
     ghostscript \
     git \
     curl \
