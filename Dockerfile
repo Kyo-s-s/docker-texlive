@@ -11,7 +11,9 @@ RUN pacman -Syyu --noconfirm \
     ghostscript \
     git \
     curl \
-    unzip
+    unzip \
+    nodejs \
+    npm
 
 RUN git clone https://github.com/h-kitagawa/plistings.git \
     && mv /plistings/plistings.sty /usr/share/texmf-dist/tex/latex/listings/ \
