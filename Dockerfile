@@ -1,14 +1,18 @@
 FROM archlinux:base-20221009.0.92802
 
-RUN pacman -Syu --noconfirm
+ARG USER_ID=1000
+RUN useradd -m -u ${USER_ID} docker
 
-RUN pacman -S texlive-langjapanese \
+RUN pacman -Syyu --noconfirm \
+    texlive-langjapanese \
     texlive-latexextra \
-    texlive-latexindent-meta \
+    perl-yaml-tiny \
+    perl-file-homedir \
+    perl-unicode-linebreak \
     ghostscript \
     git \
     curl \
-    unzip --noconfirm
+    unzip
 
 RUN git clone https://github.com/h-kitagawa/plistings.git \
     && mv /plistings/plistings.sty /usr/share/texmf-dist/tex/latex/listings/ \
@@ -35,8 +39,6 @@ RUN curl -OL https://www.ctan.org/tex-archive/macros/latex/contrib/thmbox.zip \
     && cd .. \
     && mv thmbox /usr/share/texmf-dist/tex/latex/ \
     && mktexlsr
-
-ARG USER_ID=1000
-RUN useradd -m -u ${USER_ID} docker
+ 
 
 WORKDIR /home/docker
