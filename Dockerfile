@@ -21,7 +21,18 @@ RUN pacman -Syyu --noconfirm \
     curl \
     unzip \
     nodejs \
-    npm
+    npm \
+    fontconfig
+
+RUN mkdir -p /usr/share/texmf-dist/fonts/opentype/haranoaji \
+    && cd /tmp \
+    && curl -L -o HaranoAjiFonts.zip "https://github.com/trueroad/HaranoAjiFonts/archive/refs/tags/20231009.zip" \
+    && unzip HaranoAjiFonts.zip \
+    && mv HaranoAjiFonts-20231009/*.otf /usr/share/texmf-dist/fonts/opentype/haranoaji/ \
+    && rm -rf HaranoAjiFonts.zip HaranoAjiFonts-20231009 \
+    && mktexlsr \
+    && fc-cache -f -v \
+    && kanji-config-updmap-sys haranoaji
 
 RUN git clone https://github.com/h-kitagawa/plistings.git \
     && mv /plistings/plistings.sty /usr/share/texmf-dist/tex/latex/listings/ \
