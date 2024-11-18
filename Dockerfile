@@ -53,3 +53,4 @@ RUN  curl -OL https://mirrors.ctan.org/macros/latex/contrib/algorithmicx.zip \
     && mktexlsr
 
 WORKDIR /home/docker
+ENV PATH="$PATH:/usr/bin/vendor_perl"
