@@ -1,4 +1,4 @@
-FROM archlinux:base-devel
+FROM ghcr.io/archlinux/archlinux:base-devel
 
 ARG UID=1000
 ARG GID=1000
