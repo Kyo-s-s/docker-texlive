@@ -38,15 +38,6 @@ RUN git clone https://github.com/h-kitagawa/plistings.git \
     && mv /plistings/plistings.sty /usr/share/texmf-dist/tex/latex/listings/ \
     && mktexlsr
 
-RUN curl -OL https://ftp.kddilabs.jp/CTAN/macros/latex/contrib/thmbox.zip \
-    && unzip thmbox.zip \
-    && cd thmbox \
-    && latex thmbox.ins \
-    && latex thmbox.dtx \
-    && cd .. \
-    && mv thmbox /usr/share/texmf-dist/tex/latex/ \
-    && mktexlsr
-
 RUN curl -OL https://mirrors.ctan.org/macros/latex/contrib/algorithms.zip \
     && unzip algorithms.zip \
     && cd algorithms \
