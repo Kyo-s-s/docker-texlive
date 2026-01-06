@@ -22,7 +22,9 @@ RUN pacman -Syyu --noconfirm \
     unzip \
     nodejs \
     npm \
-    fontconfig
+    fontconfig \
+    vim \
+    less
 
 RUN mkdir -p /usr/share/texmf-dist/fonts/opentype/haranoaji \
     && cd /tmp \
