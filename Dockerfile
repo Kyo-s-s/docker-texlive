@@ -24,7 +24,8 @@ RUN pacman -Syyu --noconfirm \
     npm \
     fontconfig \
     vim \
-    less
+    less \
+    python
 
 RUN mkdir -p /usr/share/texmf-dist/fonts/opentype/haranoaji \
     && cd /tmp \
