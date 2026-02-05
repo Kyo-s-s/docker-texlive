@@ -25,7 +25,9 @@ RUN pacman -Syyu --noconfirm \
     fontconfig \
     vim \
     less \
-    python
+    python \
+    jujutsu \
+    lazyjj
 
 RUN mkdir -p /usr/share/texmf-dist/fonts/opentype/haranoaji \
     && cd /tmp \
